@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.4.2",
+    "@heroicons/react": "^1.0.5",
+    "bcryptjs": "^2.4.3",
+    "firebase": "^9.6.2",
+    "moment": "^2.29.1",
+    "mysql": "npm:mysql2@^2.1.0",
+    "next": "latest",
+    "next-auth": "^4.0.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-moment": "^1.1.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.4",
+    "serverless-mysql": "^1.5.4",
+    "tailwindcss": "^3.0.0"
+  }
+}
