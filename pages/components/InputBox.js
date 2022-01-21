@@ -15,7 +15,7 @@ function Input() {
   const [openInput, setOpenInput] = useState(false)
 
   return (
-    <div className={"w-full p-5 bg-white rounded-xl shadow-md space-y-4"}>
+    <div className={"w-full p-2 sm:p-5 bg-white sm:rounded-xl shadow-md space-y-4"}>
       <div className="flex items-center space-x-4">
         <Image src={session.user.image} height={50} width={50} layout="fixed" />
         <div

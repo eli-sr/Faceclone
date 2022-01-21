@@ -48,8 +48,8 @@ function Post({ id, data }) {
       </div>
       <div className="space-y-3">
         <p
-          className={`mx-3 mt-3 break-words ${
-            data.message.length < 90 ? "text-lg sm:text-2xl" : "text-base"
+          className={`mx-3 mt-0 break-words ${
+            data.message.length < 90 ? "text-2xl" : "text-base"
           }`}
         >
           {data.message}

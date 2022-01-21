@@ -84,13 +84,9 @@ function InputCard({ type, session, ...props }) {
       })
     }
   }
-  // console.log("\n\n\tINFO:")
-  // console.log("text ->",text)
-  // console.log("props.input ->",props.input)
-  // console.log("fileSelected ->",fileSelected)
   return (
     <div className="absolute left-0 top-0 z-10 bg-opacity-70 w-full h-full bg-gray-100 flex flex-col justify-center items-center">
-      <div className="bg-white shadow-md p-4 rounded-md w-[470px] space-y-4">
+      <div className="bg-white shadow-md p-4 rounded-md min-w-[360px] space-y-4">
         <div className="flex items-center w-full relative justify-center">
           <h1 className="text-2xl font-bold">
             {type == "input" ? "Crear publicación" : "Editar publicación"}

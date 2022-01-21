@@ -21,29 +21,14 @@ function Header() {
   const { data: session } = useSession()
 
   return (
-    <div
-      className="
-                fixed
-                w-full
-                top-0 
-                z-50 
-                bg-white 
-                flex 
-                items-center 
-                p-2
-                lg:px-5
-                shadow-md
-            "
-    >
+    <div className="fixed w-full top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
       {/* Left */}
       <div className="flex items-center mr-2 sm:mr-6">
-        {" "}
-        {/* Logo */}
         <Image hidden src="/fb.webp" width={40} height={40} layout="fixed" />
       </div>
-      <div className="flex items-center rounded-full bg-gray-100 p-2">
+      {/* Barra de búsqueda */}
+      <div className="flex items-center rounded-full bg-gray-100 p-2.5">
         <SearchIcon className="h-5 text-gray-600 sm:h-6" />
-        {/* Barra de búsqueda */}
         <input
           type="text"
           placeholder="Search Faceclone"
@@ -61,26 +46,11 @@ function Header() {
         </div>
       </div>
       {/* Right */}
-      <div
-        className="
-                flex
-                items-center 
-                sm:space-x-2 
-                justify-end"
-      >
-        {/* Profile pic */}
-        <p
-          className="
-                    hidden
-                    md:flex
-                    whitespace-nowrap
-                    font-semibold
-                    mr-3
-                "
-        >
+      <div className="flex items-center sm:space-x-2 justify-end">
+        <img src={session.user.image} className="h-10 w-10 hidden sm:flex" />
+        <p className="hidden md:flex whitespace-nowrap font-semibold mr-3">
           {session.user.name}
         </p>
-        <img src={session.user.image} className="h-10 w-10" />
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />
