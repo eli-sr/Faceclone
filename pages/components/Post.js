@@ -25,7 +25,7 @@ function Post({ id, data }) {
       })
   }
   return (
-    <div className="bg-white rounded-xl p-5 shadow-md">
+    <div className="bg-white sm:rounded-xl p-2 sm:p-5 shadow-md">
       <div className="flex justify-between">
         <div className="flex space-x-3 items-center">
           <img src={data.image} className="h-10 w-10" />
@@ -48,8 +48,8 @@ function Post({ id, data }) {
       </div>
       <div className="space-y-3">
         <p
-          className={`mx-3 mt-3 break-all ${
-            data.message.length < 90 ? "text-2xl" : "text-base"
+          className={`mx-3 mt-3 break-words ${
+            data.message.length < 90 ? "text-lg sm:text-2xl" : "text-base"
           }`}
         >
           {data.message}

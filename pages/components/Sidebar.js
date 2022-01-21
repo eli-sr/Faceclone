@@ -15,7 +15,7 @@ import {
 function Sidebar() {
     const {data: session, loading} = useSession()
     return (
-        <div className="p-2 mt-5 max-w-xl xl:min-w-[300px] space-y-1 pt-20">
+        <div className="hidden sm:inline p-2 mt-5 max-w-xl xl:min-w-[300px] space-y-1 pt-20">
             <SidebarRow Icon={UsersIcon} title="Friends"/>
             <SidebarRow Icon={UserGroupIcon} title="Groups"/>
             <SidebarRow Icon={ShoppingBagIcon} title="Marketplace"/>

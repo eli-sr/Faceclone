@@ -47,15 +47,7 @@ function Header() {
         <input
           type="text"
           placeholder="Search Faceclone"
-          className="
-                        hidden
-                        lg:inline-flex
-                        ml-2 
-                        items-center 
-                        bg-transparent
-                        outline-none 
-                        placeholder-gray-500 
-                        flex-shrink"
+          className=" hidden lg:inline-flex ml-2 items-center bg-transparent outline-none placeholder-gray-500 flex-shrink"
         />
       </div>
       {/* Center */}
