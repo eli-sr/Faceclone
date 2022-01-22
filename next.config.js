@@ -12,5 +12,5 @@ module.exports = {
     'MYSQL_DATABASE': 'users',
     'MYSQL_USER': 'root',
     'MYSQL_PASSWORD': 'passtest',
-    } 
+  },
 }

@@ -10,6 +10,6 @@ create table user (
 insert into user
     (username, password, name)
 values
-('rachel','1234','Rachel');
+('eli','1234','eli');
 
 -- drop table user;

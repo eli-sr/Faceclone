@@ -27,4 +27,7 @@
   .inputSignup {
     @apply focus:outline-none ring-1 ring-gray-300 rounded-md pl-3 p-1 focus:ring-2 focus:ring-blue-400
   }
+  .line {
+    @apply bg-gray-300 pt-[1px] w-full
+  }
 }

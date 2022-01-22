@@ -28,7 +28,7 @@ function Post({ id, data }) {
     <div className="bg-white sm:rounded-xl p-2 sm:p-5 shadow-md">
       <div className="flex justify-between">
         <div className="flex space-x-3 items-center">
-          <img src={data.image} className="h-10 w-10" />
+          <img src={data.image} loading="lazy" className="h-10 w-10" />
           <div className="flex-col">
             <p>{data.name}</p>
             <p className="text-sm text-gray-400">
@@ -56,7 +56,7 @@ function Post({ id, data }) {
         </p>
         {data.postImage && (
           <div className="w-full flex justify-center">
-            <img src={data.postImage} className="rounded-lg min-w-full" />
+            <img src={data.postImage} loading="lazy" className="rounded-lg min-w-full" />
           </div>
         )}
       </div>

@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import Router from "next/router"
+import postData from "../../lib/dataFetch"
 
 function Signup() {
   const [checked, setChecked] = useState(false)
@@ -9,20 +10,6 @@ function Signup() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   const [confirm, setConfirm] = useState("")
-  async function postData(url = "", data = {}) {
-    const response = await fetch(url, {
-      method: "POST",
-      mode: "cors",
-      cache: "no-cache",
-      credentials: "same-origin",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      referrerPolicy: "no-referrer",
-      body: JSON.stringify(data),
-    })
-    return response.json()
-  }
   const handleSubmit = (e) => {
     e.preventDefault()
     if (name == "" || username == "" || password == "" || confirm == "") return

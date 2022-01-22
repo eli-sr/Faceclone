@@ -19,7 +19,6 @@ import DropdownSession from "./DropdownSession"
 
 function Header() {
   const { data: session } = useSession()
-
   return (
     <div className="fixed w-full top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
       {/* Left */}
