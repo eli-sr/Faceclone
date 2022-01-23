@@ -16,14 +16,20 @@ import {
 } from "@heroicons/react/outline"
 import { useSession } from "next-auth/react"
 import DropdownSession from "./DropdownSession"
+import Link from "next/link"
 
 function Header() {
   const { data: session } = useSession()
+  console.log(session)
   return (
     <div className="fixed w-full top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
       {/* Left */}
       <div className="flex items-center mr-2 sm:mr-6">
-        <Image hidden src="/fb.webp" width={40} height={40} layout="fixed" />
+        <Link href="/">
+          <a className="flex items-center">
+            <Image hidden src="/fb.webp" width={40} height={40} layout="fixed" />
+          </a>
+        </Link>
       </div>
       {/* Barra de búsqueda */}
       <div className="flex items-center rounded-full bg-gray-100 p-2.5">
@@ -46,10 +52,14 @@ function Header() {
       </div>
       {/* Right */}
       <div className="flex items-center sm:space-x-2 justify-end">
-        <img src={session.user.image} className="h-10 w-10 hidden sm:flex" />
-        <p className="hidden md:flex whitespace-nowrap font-semibold mr-3">
-          {session.user.name}
-        </p>
+        <Link href={`/user/${session.id}`}>
+          <a className="flex items-center sm:space-x-2">
+            <img src={session.user.image} className="h-10 w-10 hidden sm:flex" />
+            <p className="hidden md:flex whitespace-nowrap font-semibold mr-3">
+              {session.user.name}
+            </p>
+          </a>
+        </Link>
         <ViewGridIcon className="icon" />
         <ChatIcon className="icon" />
         <BellIcon className="icon" />

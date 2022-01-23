@@ -7,6 +7,7 @@ import { doc, deleteDoc } from "firebase/firestore"
 import { db, storage } from "../../firebase"
 import { ref, deleteObject } from "firebase/storage"
 import InputCard from "./InputCard"
+import Link from "next/link"
 
 function Post({ id, data }) {
   const { data: session } = useSession()
@@ -28,9 +29,17 @@ function Post({ id, data }) {
     <div className="bg-white sm:rounded-xl p-2 sm:p-5 shadow-md">
       <div className="flex justify-between">
         <div className="flex space-x-3 items-center">
-          <img src={data.image} loading="lazy" className="h-10 w-10" />
+          <Link href={`/user/${data.userId}`}>
+            <a href="#">
+              <img src={data.image} loading="lazy" className="h-10 w-10" />
+            </a>
+          </Link>
           <div className="flex-col">
-            <p>{data.name}</p>
+          <Link href={`/user/${data.userId}`}>
+            <a href="#">
+              <span className="font-semibold hover:underline">{data.name}</span>
+            </a>
+          </Link>
             <p className="text-sm text-gray-400">
               <Moment fromNow>{data?.timestamp?.toDate()}</Moment>
             </p>

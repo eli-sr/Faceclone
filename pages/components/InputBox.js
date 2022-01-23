@@ -45,7 +45,7 @@ function Input() {
       )}
       <hr />
       <div className="flex justify-evenly space-x-0">
-        <div className="inputIcon">
+        <div className="hidden sm:inputIcon">
           <VideoCameraIcon className="h-7 text-red-400" />
           <p className="text-xs sm:text-sm text-gray-500 font-bold">
             Live Video
