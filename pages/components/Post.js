@@ -75,7 +75,7 @@ function Post({ id, data }) {
             <div className="bg-gray-50 p-4 rounded-lg w-60 space-y-1">
               <div className="flex p-2">
                 <label className="text-center">
-                  ¿Seguro de que deseas eliminar el post?
+                  Are you sure you want to delete this post?
                 </label>
               </div>
               <div className="flex justify-evenly space-x-3">
@@ -86,13 +86,13 @@ function Post({ id, data }) {
                     setActiveDropdown(false)
                   }}
                 >
-                  Cancelar
+                  Cancel
                 </button>
                 <button
                   className="bg-red-200 py-2 px-4 rounded-lg text-red-700"
                   onClick={deletePost}
                 >
-                  Confirmar
+                  Confirm
                 </button>
               </div>
             </div>

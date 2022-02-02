@@ -3,16 +3,13 @@ import HeaderIcon from "./HeaderIcon"
 import {
   BellIcon,
   ChatIcon,
-  ChevronDownIcon,
   HomeIcon,
   UserGroupIcon,
   ViewGridIcon,
 } from "@heroicons/react/solid"
 import {
-  FlagIcon,
-  PlayIcon,
   SearchIcon,
-  ShoppingCartIcon,
+  UserCircleIcon,
 } from "@heroicons/react/outline"
 import { useSession } from "next-auth/react"
 import DropdownSession from "./DropdownSession"
@@ -44,10 +41,8 @@ function Header() {
       <div className="flex justify-center flex-grow mx-1 sm:mx-5">
         <div className="flex space-x-2 sm:space-x-9 md:space-x-10">
           <HeaderIcon Icon={HomeIcon} />
-          <HeaderIcon Icon={FlagIcon} />
-          <HeaderIcon Icon={PlayIcon} />
-          <HeaderIcon Icon={ShoppingCartIcon} />
           <HeaderIcon Icon={UserGroupIcon} />
+          <HeaderIcon Icon={UserCircleIcon} />
         </div>
       </div>
       {/* Right */}

@@ -4,6 +4,7 @@ import Header from "./components/Header"
 import Login from "./components/Login"
 import Sidebar from "./components/Sidebar"
 import Feed from "./components/Feed"
+import Widgets from "./components/Widgets"
 
 export default function Home({ providers }) {
   const { data: session, status } = useSession()
@@ -18,11 +19,11 @@ export default function Home({ providers }) {
           <title>Faceclone</title>
         </Head>
 
-        <Header/>
+        <Header />
         <main className="flex">
           <Sidebar />
           <Feed />
-          {/* Widgets */}
+          <Widgets />
         </main>
       </div>
     )
