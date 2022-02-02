@@ -1,8 +1,9 @@
 import postData from "../../lib/dataFetch"
 import Header from "../components/Header"
 import { useSession } from "next-auth/react"
-import UserFront from "../components/UserFront"
-import { useState } from "react"
+import UserFront from "../components/UserProfile/UserFront"
+import Posts from "../components/Posts"
+import MiniPhotos from "../components/UserProfile/MiniPhotos"
 
 export async function getStaticPaths() {
   return {
@@ -18,9 +19,9 @@ export async function getStaticProps({ params }) {
   )
   console.log("len->", result.length)
   if (result.length != 0) {
-    console.log(result[0])
     return {
       props: {
+        id: params.id,
         name: result[0].name,
         image: result[0].userImage,
       },
@@ -33,7 +34,7 @@ export async function getStaticProps({ params }) {
   }
 }
 
-function profile({ name, image }) {
+function profile({ id, name, image }) {
   const { data: session } = useSession()
   console.log("nam", name)
   function Noexiste() {
@@ -42,13 +43,19 @@ function profile({ name, image }) {
 
   if (name) {
     return (
-      <div className="w-screen h-screen bg-gray-100">
+      <div className="w-screen h-screen bg-gray-100 space-y-4 overflow-auto">
         {session && (
           <div>
             <Header />
           </div>
         )}
         <UserFront name={name} image={image} />
+        <div className="flex p-5 space-x-4">
+          <MiniPhotos id={id}/>
+          <div className="w-full h-full">
+            <Posts id={id} />
+          </div>
+        </div>
       </div>
     )
   }

@@ -2,12 +2,15 @@ import { collection, query, onSnapshot ,orderBy} from "firebase/firestore"
 import { db } from "../../firebase"
 import { useEffect, useState } from "react"
 import Post from "./Post"
+import { where } from "firebase/firestore"
 
-function Posts() {
+function Posts({ id }) {
   const [posts, setPosts] = useState([])
   useEffect(
     () =>
       onSnapshot(
+        id ?
+        query(collection(db, "posts"), where("userId","==",parseInt(id))):
         query(collection(db, "posts"), orderBy("timestamp", "desc")),
         (snapshot) => {
           setPosts(snapshot.docs);
