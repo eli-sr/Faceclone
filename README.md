@@ -12,7 +12,9 @@ Faceclone is my very first project for learn Next.js, Tailwind CSS and Firebase.
 
 ## Screenshots
 
-![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
+![](images/mobile_example.jpg)
+![](images/example_1.jpg)
+![](images/example_2.jpg)
 
 ## Developing
 
