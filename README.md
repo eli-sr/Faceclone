@@ -4,6 +4,7 @@ Faceclone is my very first project for learn Next.js, Tailwind CSS and Firebase.
 
 ## Features
 
+- Mobile responsive
 - Login and register users
 - Publish, edit and delete posts
 - Upload pictures to posts

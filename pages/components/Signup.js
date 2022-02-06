@@ -73,7 +73,7 @@ function Signup() {
             checked={checked}
             onChange={() => setChecked(!checked)}
           />
-          <span>Mostrar contraseña</span>
+          <span>Show password</span>
         </div>
         <div className="w-full flex flex-col items-center space-y-3">
           <button

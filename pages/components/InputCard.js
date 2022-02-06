@@ -6,7 +6,6 @@ import {
   UserIcon,
   MicrophoneIcon,
   DotsHorizontalIcon,
-  CameraIcon,
   PlusCircleIcon,
 } from "@heroicons/react/solid"
 import {
@@ -17,7 +16,7 @@ import {
   serverTimestamp,
   updateDoc,
 } from "firebase/firestore"
-import { useState, useRef, useEffect } from "react"
+import { useState, useRef } from "react"
 import { db, storage } from "../../firebase"
 import { ref, getDownloadURL, uploadString } from "firebase/storage"
 
@@ -86,10 +85,10 @@ function InputCard({ type, session, ...props }) {
   }
   return (
     <div className="absolute left-0 top-0 z-10 bg-opacity-70 w-full h-full bg-gray-100 flex flex-col justify-center items-center">
-      <div className="bg-white shadow-md p-4 rounded-md min-w-[360px] space-y-4">
+      <div className="bg-white shadow-md p-4 rounded-md min-w-[360px] sm:min-w-[500px] space-y-4">
         <div className="flex items-center w-full relative justify-center">
           <h1 className="text-2xl font-bold">
-            {type == "input" ? "Crear publicación" : "Editar publicación"}
+            {type == "input" ? "Create post" : "Edit post"}
           </h1>
           <button
             className="absolute right-0"
@@ -151,7 +150,7 @@ function InputCard({ type, session, ...props }) {
                 className="flex flex-col w-full h-[250px] justify-center rounded-lg items-center hover:bg-gray-200"
               >
                 <PlusCircleIcon className="h-10 text-gray-400" />
-                <span className="text-lg select-none">Añadir fotos/vídeos</span>
+                <span className="text-lg select-none">Add photos/videos</span>
                 <input
                   type="file"
                   ref={filePickerRef}
@@ -163,7 +162,7 @@ function InputCard({ type, session, ...props }) {
           </div>
         )}
         <div className="flex items-center justify-between ring-1 ring-gray-300 py-3 px-4 rounded-lg">
-          <span className="font-extrabold">Añadir a publicación</span>
+          <span className="font-extrabold">Add to post</span>
           <div className="flex items-center justify-between space-x-2">
             <button onClick={() => setSelectFile(true)}>
               <PhotographIcon
