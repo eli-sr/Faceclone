@@ -6,7 +6,8 @@ export default async function register(req, res) {
     const { password, ...user } = req.body;
     // validate
     const validate = await excuteQuery({
-        query: `select username from user where username='${user.username}'`,
+        query: `select username from user where username=?`,
+        values: [user.username]
       })
       console.log("result ->", validate)
        if (validate.length != 0)

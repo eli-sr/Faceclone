@@ -12,7 +12,8 @@ export default NextAuth({
       },
       async authorize(credentials, req) {
         const result = await excuteQuery({
-          query: `select * from user where username='${credentials.username}'`,
+          query: `select * from user where username=?`,
+          values: credentials.username
         })
         console.log("result ->", result)
         if (result.length != 0) {
