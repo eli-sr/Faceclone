@@ -11,6 +11,16 @@ export default NextAuth({
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials, req) {
+        if(1){
+          var image = "/default.jpg"
+          const userProvisional = {
+            id: 1,
+            name: "provisional",
+            email: "example@example.com",
+            image: image,
+          }
+          return userProvisional
+        }
         const result = await excuteQuery({
           query: `select * from user where username=?`,
           values: credentials.username
@@ -34,7 +44,6 @@ export default NextAuth({
             }
             return user
           }
-          return null
         }
       },
     }),
