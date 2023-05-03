@@ -17,7 +17,7 @@ import {
   updateDoc,
 } from "firebase/firestore"
 import { useState, useRef } from "react"
-import { db, storage } from "../../firebase"
+import { db, storage } from "../firebase"
 import { ref, getDownloadURL, uploadString } from "firebase/storage"
 
 function InputCard({ type, session, ...props }) {
