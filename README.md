@@ -2,6 +2,10 @@
 
 Faceclone is my very first project for learn Next.js, Tailwind CSS and Firebase. In spite of being my first big fullstack project, I wanted to add the maximum number of functionalities and features to the app. Also I've used a MySQL database to handle the users register and login locally.
 
+## Try it now!
+
+http://faceclone-eli-sr.vercel.app/
+
 ## Features
 
 - Mobile responsive
