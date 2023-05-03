@@ -13,7 +13,7 @@ function DropdownSession() {
       </button>
       {active &&
         <div className="flex flex-col absolute right-0 rounded-lg shadow-lg bg-gray-100 p-2 w-28 text-center text-gray-700 text-sm xl:w-36 xl:text-lg">
-          <Link href={`/user/${session.id}`}>
+          <Link href={`/user/#`}>
             <a className="py-2 px-4 rounded-lg hover:bg-gray-200" href="#">My profile</a>
           </Link>
           <a className="py-2 px-4 rounded-lg hover:bg-gray-200" href="#">Settings</a>

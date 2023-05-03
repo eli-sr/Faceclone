@@ -47,7 +47,7 @@ function Header() {
       </div>
       {/* Right */}
       <div className="flex items-center sm:space-x-2 justify-end">
-        <Link href={`/user/${session.id}`}>
+        <Link href={`/user/#`}>
           <a className="flex items-center sm:space-x-2">
             <img src={session.user.image} className="h-10 w-10 hidden sm:flex" />
             <p className="hidden md:flex whitespace-nowrap font-semibold mr-3">

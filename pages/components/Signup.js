@@ -12,19 +12,21 @@ function Signup() {
   const [confirm, setConfirm] = useState("")
   const handleSubmit = (e) => {
     e.preventDefault()
-    if (name == "" || username == "" || password == "" || confirm == "") return
-    postData("http://localhost:3000/api/auth/signup", {
-      name: name,
-      username: username,
-      password: password,
-    }).then((data) => {
-      setValidUser(data.ok)
-      if (!data.ok) {
-        setUsername("")
-        setPassword("")
-        setConfirm("")
-      } else Router.push("/")
-    })
+    console.log("Comming soon!")
+    return
+    // if (name == "" || username == "" || password == "" || confirm == "") return
+    // postData("http://localhost:3000/api/auth/signup", {
+    //   name: name,
+    //   username: username,
+    //   password: password,
+    // }).then((data) => {
+    //   setValidUser(data.ok)
+    //   if (!data.ok) {
+    //     setUsername("")
+    //     setPassword("")
+    //     setConfirm("")
+    //   } else Router.push("/")
+    // })
   }
   return (
     <div className="w-screen h-screen bg-gray-200 flex justify-center items-center">
@@ -83,7 +85,7 @@ function Signup() {
             Sign Up
           </button>
           <Link href="/">
-            <a className="text-blue-600">¿Ya tienes una cuenta?</a>
+            <a className="text-blue-600">Already have an account?</a>
           </Link>
         </div>
       </form>

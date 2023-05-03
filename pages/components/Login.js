@@ -68,6 +68,11 @@ function Login({ providers }) {
           </Link>
         </form>
       </div>
+      <div className="my-3 py-2 px-4 bg-yellow-50 border border-yellow-500 rounded-md">
+        <h1 className="text-yellow-600 text-sm text-center">
+          Note: Provisionally, any user and password can be used
+        </h1>
+      </div>
     </div>
   )
 }
