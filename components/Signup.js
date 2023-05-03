@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import Router from "next/router"
-import postData from "../../lib/dataFetch"
+import postData from "../lib/dataFetch"
 
 function Signup() {
   const [checked, setChecked] = useState(false)

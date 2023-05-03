@@ -1,5 +1,5 @@
 import Head from "next/head"
-import Signup from "./components/Signup"
+import Signup from "../components/Signup"
 
 function signup() {
   return (
