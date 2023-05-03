@@ -3,12 +3,12 @@ import "firebase/compat/storage"
 import { getFirestore } from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB5GGiraYYilQM-b4vL5xGZTpPmJyTawCk",
-  authDomain: "face-clone-68a93.firebaseapp.com",
-  projectId: "face-clone-68a93",
-  storageBucket: "face-clone-68a93.appspot.com",
-  messagingSenderId: "577535903636",
-  appId: "1:577535903636:web:d30a83d841e69b25f93181",
+  apiKey: process.env.FIREBASE_APIKEY,
+  authDomain: process.env.FIREBASE_AUTHDOMAIN,
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECTID,
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGEBUCKET,
+  messagingSenderId: process.env.FIREBASE_MESSAGINGSENDERID,
+  appId: process.env.FIREBASE_APPID,
 }
 
 const app = !firebase.apps.length
